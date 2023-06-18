@@ -1,0 +1,6 @@
+<h1>Welcome to My App</h1>
+<app-history *ngIf="isLoggedIn"></app-history>
+<app-cart *ngIf="isLoggedIn"></app-cart>
+<app-inventory *ngIf="isLoggedIn"></app-inventory>
+<app-login *ngIf="!isLoggedIn"></app-login>
+<button *ngIf="isLoggedIn" (click)="handleLogout()">Logout</button>

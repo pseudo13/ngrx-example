@@ -1,0 +1,11 @@
+<h2>Cart</h2>
+<h3>Cart Items in total: {{ (items$ | async).length }}</h3>
+{{ items | json }}
+<ul>
+  <li *ngFor="let item of items" class="cart-item">
+    <div>{{ item.name }} - ${{ item.price }}</div>
+    <div>
+      <button (click)="handleRemoveFromCart(item)">Remove from Cart</button>
+    </div>
+  </li>
+</ul>

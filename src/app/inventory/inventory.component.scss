@@ -1,0 +1,14 @@
+.inventory-item {
+  display: flex;
+  background-color: green;
+  color: white;
+  font-size: large;
+  padding: 5px;
+  margin: 5px;
+  > * {
+    flex: 1;
+  }
+  &:nth-child(2n) {
+    background-color: gray;
+  }
+}

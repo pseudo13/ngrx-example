@@ -1,0 +1,20 @@
+<h2>Inventory</h2>
+
+<div *ngIf="inventoryItems">
+  <ul>
+    <li *ngFor="let item of inventoryItems" class="inventory-item">
+      <div>
+        <span>{{ item.name }}</span>
+        <span class="price">$ {{ item.price }}</span>
+      </div>
+
+      <div>
+        <button (click)="handleAddToCart(item)">Add to Cart</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!inventoryItems">
+  <p>Loading inventory items...</p>
+</div>
